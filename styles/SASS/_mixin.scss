@@ -1,0 +1,7 @@
+//Media queries
+
+@mixin desktopOne {
+    @media only screen and (max-width: 1080px) {
+        @content;
+    }
+}

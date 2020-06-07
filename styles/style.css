@@ -255,6 +255,13 @@ header {
   left: 70%;
 }
 
+@media only screen and (max-width: 1080px) {
+  .heroText {
+    font-size: 3rem;
+    top: 30%;
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -393,6 +400,13 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+.name,
+.playerGuess {
+  font-size: 5rem;
+  padding: 2%;
+  text-align: center;
+}
+
 p,
 h2 {
   font-size: 5rem;
@@ -411,4 +425,11 @@ h2 {
   color: #fff;
   font-size: 8rem;
   margin-bottom: 20%;
+}
+
+@media only screen and (max-width: 1080px) {
+  .name,
+  .playerGuess {
+    font-size: 3rem;
+  }
 }

@@ -2,17 +2,22 @@
 
 body {
      font-family: 'Oswald', sans-serif;
-        font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    }
+.name,
+    .playerGuess {
+        font-size: 5rem;
+        padding: 2%;
+        text-align: center;
     }
 
-
- p,
+    p,
     h2 {
         font-size: 5rem;
     }
 
-     .quiz p {
-        padding-bottom: 10%;
+    .quiz p {
+    padding-bottom: 10%;
     }
 
  .hide p {
@@ -20,8 +25,18 @@ body {
         padding: 2%;
     }
 
-    #wordToGuess {
-        color: #fff;
-        font-size: 8rem;
-        margin-bottom: 20%;
+#wordToGuess {
+    color: #fff;
+    font-size: 8rem;
+    margin-bottom: 20%;
+}
+
+
+//Media Queries
+
+@include desktopOne {
+    .name,
+    .playerGuess  {
+        font-size: 3rem;
     }
+}
