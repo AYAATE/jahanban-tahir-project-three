@@ -28,3 +28,12 @@
             top: 30%;
         }
     }
+
+     @include desktopThree {
+        .heroText{
+            font-size: 3rem;
+            left: 5%;
+            top: 2%;
+            width: 30%;
+        }
+    }

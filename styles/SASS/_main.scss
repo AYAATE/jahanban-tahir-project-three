@@ -28,12 +28,7 @@
         font-size: 5rem;
     }
 
-    .name,
-    .playerGuess {
-        font-size: 5rem;
-        padding: 2%;
-        text-align: center;
-    }
+    
 
     .btn {
         padding: 5%;
@@ -65,14 +60,14 @@
 
 
     .hide {
-        width: 43%;
+        width: 60%;
         height: 15%;
         background-color: #FF0019;
         text-align: center;
-        border-radius: 5%;
+        border-radius: 30px;
         position: absolute;
         top: 31%;
-        left: 28%;
+        left: 20%;
     }
 
 
@@ -96,7 +91,7 @@
         background-color: #FF0019;
         margin: 5% auto;
         padding: 5%;
-        border-radius: 5%;
+        border-radius: 30px;
         text-align: center;
         width: 100%;
     }
@@ -116,4 +111,29 @@
         border: 2px solid #FF0019;
         border-radius: 5%;
         text-align: center;
+    }
+
+
+    //Media Query
+
+    @include desktopOne {
+        .hide {
+            top: 33%;
+        }
+
+        .result {
+            width: 45%;
+        }
+    }
+
+    @include desktopTwo {
+        .hide {
+            top: 38%;
+        }
+    }
+
+    @include desktopThree {
+        label {
+            font-size: 3rem;
+        }
     }
