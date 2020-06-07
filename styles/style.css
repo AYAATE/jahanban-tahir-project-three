@@ -264,10 +264,20 @@ header {
 
 @media only screen and (max-width: 780px) {
   .heroText {
-    font-size: 3rem;
+    font-size: 2.5rem;
     left: 5%;
     top: 2%;
     width: 30%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  header {
+    background-size: cover;
+  }
+  .heroText {
+    font-size: 1.5rem;
+    top: 1%;
   }
 }
 
@@ -404,6 +414,60 @@ label {
   }
 }
 
+@media only screen and (max-width: 740px) {
+  .intro {
+    width: 60%;
+  }
+  .intro p,
+  .jqvalue {
+    font-size: 3rem;
+  }
+  .hide {
+    top: 40%;
+  }
+  .quiz {
+    width: 70%;
+    margin: 5% 16%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .quiz {
+    width: 100%;
+    margin: 5% 0%;
+  }
+  .hide {
+    top: 38%;
+  }
+  .result {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 355px) {
+  .intro {
+    width: 70%;
+  }
+  .hide {
+    top: 280px;
+    left: 5%;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 331px) {
+  .intro {
+    width: 90%;
+    margin-bottom: 10%;
+  }
+  .hide {
+    top: 350px;
+  }
+  .userResponse {
+    margin-top: 30%;
+  }
+}
+
 input {
   padding: 12px 20px;
   margin: 8px 0;
@@ -416,6 +480,12 @@ input {
 
 input:focus {
   border: 2px solid #000;
+}
+
+@media only screen and (max-width: 355px) {
+  input {
+    height: 65px;
+  }
 }
 
 body {
@@ -454,5 +524,18 @@ h2 {
   .name,
   .playerGuess {
     font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  p {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 355px) {
+  .name,
+  .playerGuess {
+    font-size: 2.5rem;
   }
 }

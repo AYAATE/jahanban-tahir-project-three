@@ -41,9 +41,15 @@ body {
     }
 }
 
-// @include desktopThree {
-//     p,
-//     h2 {
-//         font-size: 3rem;
-//     }
-// }
+@include desktopFour {
+   p {
+       font-size: 3rem;
+   }
+}
+
+@include desktopSix {
+    .name,
+    .playerGuess  {
+        font-size: 2.5rem;
+    }
+}

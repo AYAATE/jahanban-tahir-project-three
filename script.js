@@ -19,7 +19,7 @@ wordApp.init = function () {
 
     // Array of words to guess
 
-    const words = ['jump', 'book', 'far', 'concert', 'ice', 'road', 'pizza', 'bike'];
+    const words = ['jump', 'book', 'far', 'car', 'ice', 'road', 'pizza', 'bike', 'london', 'street'];
 
     // Randomizing word to be displayed
 
@@ -53,8 +53,9 @@ wordApp.init = function () {
         if (e.which === 13) {
             $('#hidden').hide();
             let finalGuess = guessName.val();
+            let matchGuess = finalGuess.toUpperCase();
             //look into adding a counter here, start the value of 0 and add based on answers
-            if (finalGuess === word) {
+            if (matchGuess === wordDisp) {
                 $('#score').text('a true hero!');
                 count = count + 1;
                 $('.count').html(count);

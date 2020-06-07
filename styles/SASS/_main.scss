@@ -137,3 +137,64 @@
             font-size: 3rem;
         }
     }
+
+    @include desktopFour {
+        .intro {
+            width: 60%;
+        }
+
+        .intro p,
+        .jqvalue {
+            font-size: 3rem;
+        }
+
+        .hide {
+            top: 40%;
+        }
+
+        .quiz {
+            width: 70%;
+            margin: 5% 16%;
+        }
+    }
+
+    @include desktopFive {
+        .quiz {
+            width: 100%;
+            margin: 5% 0%;
+        }
+
+        .hide {
+            top: 38%;
+        }
+
+        .result {
+            width: 80%;
+        }
+    }
+
+    @include desktopSix {
+        .intro {
+            width: 70%;
+        }
+
+        .hide {
+            top: 280px;
+            left: 5%;
+            width: 90%;
+        }
+    }
+
+    @include desktopSeven {
+        .intro {
+            width: 90%;
+            margin-bottom: 10%;
+        }
+        .hide {
+            top: 350px
+        }
+
+        .userResponse {
+            margin-top: 30%;
+        }
+    }

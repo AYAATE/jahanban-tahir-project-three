@@ -24,8 +24,8 @@
 
             <!-- This <input> field is where I'm getting the name from -->
             <div class="intro">
-                <label for="userName">Enter your name:</label>
-                <input class="name" type="text" required="true" placeholder="Your name.." id="userName" />
+                <label for="userName">Enter your initials:</label>
+                <input class="name" type="text" required="true" placeholder="Your name.." id="userName" maxlength="5" />
                 <p> Hi! <span class="jqValue"> </span></p>
                 <a href="#secret" class="btn"> Ready to Play</a>
             </div>
@@ -34,7 +34,7 @@
         <section>
             <div class="quiz" id="secret">
                 <h2>Can you guess this word:</h2>
-                <p id="wordToGuess"></p>
+                <p id="wordToGuess" class="wordGuess"></p>
                 <div class="hide" id="hidden">
                     <p>****</p>
                 </div>

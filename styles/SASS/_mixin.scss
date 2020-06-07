@@ -17,3 +17,27 @@
         @content;
     }
 }
+
+@mixin desktopFour {
+    @media only screen and (max-width: 740px) {
+        @content;
+    }
+}
+
+@mixin desktopFive {
+    @media only screen and (max-width: 550px) {
+        @content;
+    }
+}
+
+@mixin desktopSix {
+    @media only screen and (max-width: 355px){
+        @content;
+    }
+}
+
+@mixin desktopSeven {
+    @media only screen and (max-width: 331px){
+        @content;
+    }
+}
