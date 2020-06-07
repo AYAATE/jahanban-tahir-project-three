@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto+Condensed&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Word Hero</title>
+</head>
+
+
+<body>
+
+    <section class="wrapper">
+        <section>
+            <header>
+                <div class="heroText">
+                    <h1>Are you a word hero?</h1>
+                </div>
+            </header>
+            <!-- Insert img in SCSS -->
+
+
+            <!-- This <input> field is where I'm getting the name from -->
+            <div class="intro">
+                <label>Enter your name:</label>
+                <input class="name" type="text" />
+                <p> Hi! <span class="jqValue"> </span></p>
+                <a href="#secret" class="btn"> Ready to Play</a>
+
+            </div>
+
+
+        </section>
+
+        <section>
+            <div class="quiz" id="secret">
+                <h2>Can you guess this word:</h2>
+                <p id="wordToGuess"></p>
+                <div class="hide" id="hidden">
+                    <p>****</p>
+                </div>
+                <div class="userResponse" id="play">
+                    <div class="response">
+                        <label>Enter your guess <span class="jqValue"> </span> and hit enter to submit:</label>
+                        <input class="playerGuess" type=" text" />
+                    </div>
+
+                    <!-- <div class="confirmResponse">
+                        <p> The word you entered is</p>
+                        <span class="playerValue"></span>
+                    </div> -->
+                </div>
+            </div>
+
+        </section>
+
+        <!-- <section>
+            <div class="letsAnswer">
+                <div>
+                    <a href="#play" class="btn"> I sure can!</a>
+                </div>
+
+            </div>
+        </section> -->
+
+
+        <section>
+            <!-- <div class="userResponse" id="play">
+                <div class="response">
+                    <label>Enter your guess <span class="jqValue"> </span> and hit enter to submit:</label>
+                    <input class="playerGuess" type=" text" />
+                </div>
+
+                <div class="confirmResponse">
+                    <p> The word you entered is</p>
+                    <span class="playerValue"></span>
+                </div>
+            </div> -->
+
+        </section>
+
+        <section>
+            <div class="result">
+                <p> You are <span id="score"></span> </p>
+                <p>Your score is: <span class="count"></span></p>
+                <a href="" class="btn" onclick="reloadPage();"> Play Again</a>
+            </div>
+
+
+        </section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+
+
+    </section>
+</body>
+
+</html>

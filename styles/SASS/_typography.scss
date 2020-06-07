@@ -1,0 +1,27 @@
+// fonts
+
+body {
+     font-family: 'Oswald', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+
+ p,
+    h2 {
+        font-size: 5rem;
+    }
+
+     .quiz p {
+        padding-bottom: 10%;
+    }
+
+ .hide p {
+        color: #fff;
+        padding: 2%;
+    }
+
+    #wordToGuess {
+        color: #fff;
+        font-size: 8rem;
+        margin-bottom: 20%;
+    }

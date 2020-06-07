@@ -1,0 +1,117 @@
+// main
+ html {
+        font-size: 62.5%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+    }
+
+    .wrapper {
+        max-width: 1280px;
+    }
+
+     .intro,
+    .response {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 5%;
+        padding: 2%;
+    }
+
+    label {
+        font-size: 5rem;
+    }
+
+    input {
+        border-radius: 5%;
+    }
+
+    .name,
+    .playerGuess {
+        font-size: 5rem;
+        padding: 2%;
+        text-align: center;
+    }
+
+    .btn {
+        padding: 5%;
+        background-color: #FFC540;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        font-size: 3rem;
+        border-radius: 5%;
+    }
+
+
+    .quiz {
+        background-color: #FFC540;
+        margin: 5% 20%;
+        padding: 2% 5%;
+        border-radius: 5%;
+        text-align: center;
+        position: relative;
+    }
+
+   
+
+
+    .hide {
+        width: 43%;
+        height: 15%;
+        background-color: red;
+        text-align: center;
+        border-radius: 5%;
+        position: absolute;
+        top: 31%;
+        left: 28%;
+    }
+
+
+
+    .response label {
+        font-size: 3rem;
+    }
+
+    .playerValue {
+        font-size: 5rem;
+    }
+
+    .letsAnswer {
+        margin-top: 5%;
+        margin-left: 42%;
+        margin-bottom: 10%;
+    }
+
+
+    .userResponse {
+        background-color: #FF0019;
+        margin: 5% auto;
+        padding: 5%;
+        border-radius: 5%;
+        text-align: center;
+        width: 100%;
+    }
+
+    .confirmResponse {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 5%;
+        padding: 2%;
+    }
+
+    .result {
+        width: 30%;
+        margin: 5% auto;
+        padding: 5%;
+        border: 2px solid #FF0019;
+        border-radius: 5%;
+        text-align: center;
+    }
