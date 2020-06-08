@@ -27,8 +27,12 @@ wordApp.init = function () {
 
     let word = words[Math.floor(Math.random() * words.length)];
 
+    console.log(word);
+
+
     let wordDisp = word.toUpperCase();
 
+    console.log(wordDisp);
 
 
     //displaying the word (word needs to be half hidden eventually)
@@ -69,10 +73,46 @@ wordApp.init = function () {
         }
     });
 
-    function reloadPage() {
+    //method to remove specific element from array
 
-        $(".playAgain").on("click");
+    function arrayRemove(arr, value) {
+        return arr.filter(function (ele) {
+            return ele != value;
+        });
     }
+
+    // Making a copy of the array without the first word
+    let newWords = arrayRemove(words, word);
+
+
+    console.log(newWords);
+
+    // getting a random word from the secon array
+
+    let secondWord = newWords[Math.floor(Math.random() * words.length)];
+
+    // on click player gets a word from the new array to guess and count is also updated
+
+    $(".guessAgain").on('click', function (guessName) {
+
+        guessName.preventDeafult();
+
+        // the value of the new word from the second array should be assigned to the variable wordDisp and then the funtion to match should run as it rasn previously and that should automatically update score. Ths function will run till the count of 5.
+
+
+    })
+
+    console.log("second word is", secondWord);
+
+
+    console.log("original word is", wordDisp);
+
+    // let wordDisp = secondWord;
+
+    // function reloadPage() {
+
+    //     $(".playAgain").on("click");
+    // }
 
 }
 
