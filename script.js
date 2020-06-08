@@ -89,20 +89,34 @@ wordApp.init = function () {
 
     // getting a random word from the secon array
 
-    let secondWord = newWords[Math.floor(Math.random() * words.length)];
+    // let secondWord = newWords[Math.floor(Math.random() * words.length)];
+
+
+
+    function replaceWord() {
+        let secondWord = newWords[Math.floor(Math.random() * words.length)];
+        console.log(secondWord);
+
+        document.getElementById("wordToGuess").innerHTML = secondWord;
+
+    }
+
+
+    // document.getElementById("wordToGuess").innerHTML = replaceWord();
+
+
+
 
     // on click player gets a word from the new array to guess and count is also updated
 
-    $(".guessAgain").on('click', function (guessName) {
+    $(".guessAgain").on('click', function (e) {
+        e.preventDefault();
+        // console.log('clicked');
+        replaceWord();
 
-        guessName.preventDeafult();
+    });
 
-        // the value of the new word from the second array should be assigned to the variable wordDisp and then the funtion to match should run as it rasn previously and that should automatically update score. Ths function will run till the count of 5.
-
-
-    })
-
-    console.log("second word is", secondWord);
+    // console.log(`word to guess now is ${wordToGuess}`);
 
 
     console.log("original word is", wordDisp);
