@@ -17,6 +17,8 @@ wordApp.init = function () {
         return Value.html(Name.val());
     });
 
+
+
     // Array of words to guess
 
     const words = ['jump', 'book', 'far', 'car', 'ice', 'road', 'pizza', 'bike', 'london', 'street'];
@@ -54,24 +56,24 @@ wordApp.init = function () {
             $('#hidden').hide();
             let finalGuess = guessName.val();
             let matchGuess = finalGuess.toUpperCase();
-            //look into adding a counter here, start the value of 0 and add based on answers
+            //look into adding a counter here, start the value of 0 add and subtract based on answers
             if (matchGuess === wordDisp) {
                 $('#score').text('a true hero!');
                 count = count + 1;
                 $('.count').html(count);
             } else {
                 $('#score').text('Not good enough!');
+                count = count - 1;
             }
 
         }
     });
 
-}
+    function reloadPage() {
 
-// Clearing result and reloading app
+        $(".playAgain").on("click");
+    }
 
-function reloadPage() {
-    location.reload(true);
 }
 
 
