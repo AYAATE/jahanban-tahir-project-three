@@ -25,27 +25,31 @@
             <!-- This <input> field is where I'm getting the name from -->
             <div class="intro">
                 <label for="userName">Enter your initials:</label>
-                <input class="name" type="text" required="true" placeholder="Your name.." id="userName" maxlength="5" />
+                <input class="name" type="text" required="true" placeholder="Your initials.." id="userName"
+                    maxlength="5" />
                 <p> Hi! <span class="jqValue"> </span></p>
-                <a href="#secret" class="btn"> Ready to Play</a>
+                <a href="" class="btn letsPlay"> Ready to Play</a>
             </div>
         </section>
 
         <section>
-            <div class="quiz" id="secret">
-                <h2>Can you guess this word:</h2>
-                <p id="wordToGuess" class="wordGuess"></p>
-                <div class="hide" id="hidden">
-                    <p>****</p>
-                </div>
-                <div class="userResponse" id="play">
-                    <div class="response">
-                        <label for="userAnswer">Enter your guess <span class="jqValue"> </span> and hit enter to
-                            submit:</label>
-                        <input class="playerGuess" type="text" required="true" placeholder="Your answer.."
-                            id="userAnswer" />
+            <main>
+                <div class="quiz" id="secret">
+                    <h2>Can you guess this word:</h2>
+                    <p id="wordToGuess" class="wordGuess"></p>
+                    <div class="hide" id="hidden">
+                        <p>****</p>
                     </div>
-                </div>
+                    <div class="userResponse" id="play">
+                        <div class="response">
+                            <label for="userAnswer">Enter your guess <span class="jqValue"> </span> and hit enter to
+                                submit:</label>
+                            <input class="playerGuess" type="text" required="true" placeholder="Your answer.."
+                                id="userAnswer" />
+                        </div>
+                    </div>
+            </main>
+
         </section>
 
         <section>

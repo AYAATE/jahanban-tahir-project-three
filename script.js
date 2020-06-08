@@ -59,6 +59,7 @@ wordApp.init = function () {
         //when player hits enter
         if (e.which === 13) {
             $('#hidden').hide();
+            $("html, body").animate({ scrollTop: 2100 }, 800);
             let finalGuess = guessName.val();
             let matchGuess = finalGuess.toUpperCase();
             //look into adding a counter here, start the value of 0 add and subtract based on answers
@@ -115,8 +116,23 @@ wordApp.init = function () {
         console.log('clicked');
         replaceWord();
         $('#hidden').show();
+        $("html, body").animate({ scrollTop: 1350 }, 800);
     });
 
+}
+
+// on clicking takes player to quiz section
+
+$(".letsPlay").on('click', function (e) {
+    e.preventDefault();
+    console.log('clicked');
+    $("html, body").animate({ scrollTop: 1360 }, 800);
+});
+
+// Clearing the score and reloading words
+
+function replacePage() {
+    location.reload(true);
 }
 
 
