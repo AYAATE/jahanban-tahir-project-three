@@ -55,6 +55,7 @@ wordApp.init = function () {
 
     // Match the word displayed and the word player entered
     guessName.on('keypress', function (e) {
+
         //when player hits enter
         if (e.which === 13) {
             $('#hidden').hide();
@@ -68,6 +69,7 @@ wordApp.init = function () {
             } else {
                 $('#score').text('Not good enough!');
                 count = count - 1;
+                $('.count').html(count);
             }
 
         }
@@ -89,44 +91,31 @@ wordApp.init = function () {
 
     // getting a random word from the secon array
 
-    // let secondWord = newWords[Math.floor(Math.random() * words.length)];
+
 
 
 
     function replaceWord() {
         let secondWord = newWords[Math.floor(Math.random() * words.length)];
         console.log(secondWord);
+        // let wordDisp = secondWord.toUpperCase();
+        wordDisp = secondWord.toUpperCase();
+        console.log(`second word to be displayed is ${wordDisp}`);
 
-        document.getElementById("wordToGuess").innerHTML = secondWord;
+        document.getElementById("wordToGuess").innerHTML = wordDisp;
+
 
     }
-
-
-    // document.getElementById("wordToGuess").innerHTML = replaceWord();
-
-
 
 
     // on click player gets a word from the new array to guess and count is also updated
 
     $(".guessAgain").on('click', function (e) {
         e.preventDefault();
-        // console.log('clicked');
+        console.log('clicked');
         replaceWord();
-
+        $('#hidden').show();
     });
-
-    // console.log(`word to guess now is ${wordToGuess}`);
-
-
-    console.log("original word is", wordDisp);
-
-    // let wordDisp = secondWord;
-
-    // function reloadPage() {
-
-    //     $(".playAgain").on("click");
-    // }
 
 }
 
