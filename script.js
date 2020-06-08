@@ -58,8 +58,12 @@ wordApp.init = function () {
 
         //when player hits enter
         if (e.which === 13) {
+            $("input").prop("disabled", true);
             $('#hidden').hide();
-            $("html, body").animate({ scrollTop: 2100 }, 800);
+            // $("html, body").animate({ scrollTop: 2100 }, 800);
+            $("html,body").delay(500).animate({
+                scrollTop: $("#score").offset().top,
+            });
             let finalGuess = guessName.val();
             let matchGuess = finalGuess.toUpperCase();
             //look into adding a counter here, start the value of 0 add and subtract based on answers
@@ -115,8 +119,13 @@ wordApp.init = function () {
         e.preventDefault();
         console.log('clicked');
         replaceWord();
+        $("input").prop("disabled", false);
+        $(".playerGuess").val('');
         $('#hidden').show();
-        $("html, body").animate({ scrollTop: 1350 }, 800);
+        // $("html, body").animate({ scrollTop: 1350 }, 800);
+        $("html,body").animate({
+            scrollTop: $("#secret").offset().top,
+        });
     });
 
 }
@@ -126,7 +135,10 @@ wordApp.init = function () {
 $(".letsPlay").on('click', function (e) {
     e.preventDefault();
     console.log('clicked');
-    $("html, body").animate({ scrollTop: 1360 }, 800);
+    // $("html, body").animate({ scrollTop: 1360 }, 800);
+    $("html,body").animate({
+        scrollTop: $("#secret").offset().top,
+    });
 });
 
 // Clearing the score and reloading words
@@ -135,6 +147,16 @@ function replacePage() {
     location.reload(true);
 }
 
+$(".endGame").on('click', function () {
+    // e.preventDefault();
+    $("html,body").animate({
+        scrollTop: $("#hero").offset().top,
+    });
+    replacePage();
+    $("html,body").animate({
+        scrollTop: $("#hero").offset().top,
+    });
+});
 
 // Document ready
 

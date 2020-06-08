@@ -349,7 +349,7 @@ label {
   text-align: center;
   border-radius: 30px;
   position: absolute;
-  top: 31%;
+  top: 30%;
   left: 20%;
 }
 
@@ -391,6 +391,10 @@ label {
   border: 2px solid #FF0019;
   border-radius: 5%;
   text-align: center;
+}
+
+.theEnd {
+  margin-top: 30%;
 }
 
 @media only screen and (max-width: 1080px) {
