@@ -61,7 +61,7 @@ wordApp.init = function () {
             $("input").prop("disabled", true);
             $('#hidden').hide();
             // $("html, body").animate({ scrollTop: 2100 }, 800);
-            $("html,body").delay(500).animate({
+            $("html,body").delay(600).animate({
                 scrollTop: $("#score").offset().top,
             });
             let finalGuess = guessName.val();
