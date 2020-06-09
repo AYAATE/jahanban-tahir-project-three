@@ -21,21 +21,18 @@ wordApp.init = function () {
 
     // Array of words to guess
 
-    const words = ['jump', 'book', 'far', 'car', 'ice', 'road', 'pizza', 'bike', 'london', 'street'];
+    const words = ['jump', 'book', 'far', 'car', 'ice', 'road', 'pizza', 'bike', 'london', 'street', 'juice', 'orbitz', 'apple', 'run', 'walk', 'talk', 'hot', 'cold', 'water', 'rain', 'sun'];
 
     // Randomizing word to be displayed
 
     let word = words[Math.floor(Math.random() * words.length)];
 
-    console.log(word);
-
+    // Word to be displayed/guess in upper case
 
     let wordDisp = word.toUpperCase();
 
-    console.log(wordDisp);
 
-
-    //displaying the word (word needs to be half hidden eventually)
+    //displaying the word (word will be hlaf hidden by .hide div)
 
     document.getElementById("wordToGuess").innerHTML = wordDisp;
 
@@ -60,13 +57,13 @@ wordApp.init = function () {
         if (e.which === 13) {
             $("input").prop("disabled", true);
             $('#hidden').hide();
-            // $("html, body").animate({ scrollTop: 2100 }, 800);
             $("html,body").delay(600).animate({
                 scrollTop: $("#score").offset().top,
             });
             let finalGuess = guessName.val();
             let matchGuess = finalGuess.toUpperCase();
-            //look into adding a counter here, start the value of 0 add and subtract based on answers
+
+            //Counter starts with the value of 0 and adds and subtracts based on answers
             if (matchGuess === wordDisp) {
                 $('#score').text('a true hero!');
                 count = count + 1;
@@ -80,7 +77,7 @@ wordApp.init = function () {
         }
     });
 
-    //method to remove specific element from array
+    //Method to remove specific element from array(tried .splice but it was'nt doing exactly what I wanted)
 
     function arrayRemove(arr, value) {
         return arr.filter(function (ele) {
@@ -88,28 +85,14 @@ wordApp.init = function () {
         });
     }
 
-    // Making a copy of the array without the first word
+    // Making a copy of the array without the first word that is already displayed
     let newWords = arrayRemove(words, word);
 
-
-    console.log(newWords);
-
     // getting a random word from the secon array
-
-
-
-
-
     function replaceWord() {
         let secondWord = newWords[Math.floor(Math.random() * words.length)];
-        console.log(secondWord);
-        // let wordDisp = secondWord.toUpperCase();
         wordDisp = secondWord.toUpperCase();
-        console.log(`second word to be displayed is ${wordDisp}`);
-
         document.getElementById("wordToGuess").innerHTML = wordDisp;
-
-
     }
 
 
@@ -148,7 +131,7 @@ function replacePage() {
 }
 
 $(".endGame").on('click', function () {
-    // e.preventDefault();
+    e.preventDefault();
     $("html,body").animate({
         scrollTop: $("#hero").offset().top,
     });

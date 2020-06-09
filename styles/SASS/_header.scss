@@ -1,4 +1,4 @@
-// header
+// Header
 
     header {
         background-image: url(../images/hero-img2.jpg);
@@ -20,7 +20,7 @@
         left: 70%;
     }
 
-    //media query
+    //media queries
 
     @include desktopOne {
         .heroText{
